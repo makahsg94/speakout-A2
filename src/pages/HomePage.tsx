@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BOOK, flattenLessons } from '../content/book'
+import { BOOK_2_URL } from '../config/sites'
 import { useProgress } from '../lib/appContext'
 import { useAuth } from '../lib/authContext'
 import { levelProgress, achievementsFor } from '../lib/progress'
@@ -206,7 +207,7 @@ export default function HomePage() {
       {/* ---- Book 2 link ---- */}
       <section className="mx-auto max-w-2xl">
         <a
-          href="https://makahsg94.github.io/the-book-2/"
+          href={BOOK_2_URL}
           className="group flex items-center gap-4 rounded-2xl border border-brand-200 bg-gradient-to-r from-brand-50 to-warm-50 p-5 shadow-sm transition-all hover:shadow-md dark:border-brand-800 dark:from-brand-950/60 dark:to-warm-950/60"
         >
           <span className="grid size-12 shrink-0 place-items-center rounded-xl bg-brand-600 text-xl text-white">
