@@ -105,6 +105,28 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         </span>
       </NavLink>
 
+      <NavLink
+        to="/trainer"
+        onClick={onNavigate}
+        className={({ isActive }) =>
+          `mb-4 flex items-center gap-2.5 rounded-xl border px-3 py-2.5 transition-colors ${
+            isActive
+              ? 'border-brand-500 bg-brand-600 text-white'
+              : 'border-brand-300 bg-gradient-to-r from-brand-50 to-accent-50 text-brand-800 hover:shadow-sm dark:border-brand-800 dark:from-brand-950/50 dark:to-accent-950/50 dark:text-brand-200'
+          }`
+        }
+      >
+        <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-brand-600 text-white">
+          <IconMic size={16} />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-sm font-bold leading-tight">Online English trainer</span>
+          <span className="block text-[11px] leading-tight opacity-80" dir="rtl" lang="ar">
+            أبو بكر مختار · اشتراك شهري
+          </span>
+        </span>
+      </NavLink>
+
       <div className="space-y-5">
         {BOOK.units.map((unit) => {
           const quiz = getUnitQuiz(unit.id)

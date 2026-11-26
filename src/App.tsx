@@ -18,6 +18,7 @@ import PageView from './pages/PageView'
 import BankPage from './pages/BankPage'
 import ReviewPage from './pages/ReviewPage'
 import ShadowingPage from './pages/ShadowingPage'
+import TrainerPage from './pages/TrainerPage'
 import AccountPage, { AccountGate } from './pages/AccountPage'
 import AdminPage from './pages/AdminPage'
 import { Link } from 'react-router-dom'
@@ -91,6 +92,7 @@ function Gate() {
         <Route path="bank/:bankId" element={<BankPage />} />
         <Route path="review" element={<ReviewPage />} />
         <Route path="shadowing" element={<ShadowingPage />} />
+        <Route path="trainer" element={<TrainerPage />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -1249,3 +1249,18 @@ a:active {
 @media (prefers-reduced-motion: reduce) {
   .part-identity__mark { animation: none; }
 }
+
+/* ---------- Sponsor bar (trainer promo, site-wide) ---------- */
+/* --sponsor-h is set by <SponsorBar> to 0 when the visitor closed it, so the
+   floating mini player and back-to-top button never hide behind the bar. */
+.sponsor-aware-bottom {
+  bottom: calc(max(1rem, env(safe-area-inset-bottom)) + var(--sponsor-h, 0px));
+  transition: bottom 0.25s ease;
+}
+.sponsor-aware-fab {
+  bottom: calc(var(--sponsor-h, 0px) + 1.5rem);
+  transition: bottom 0.25s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sponsor-aware-bottom, .sponsor-aware-fab { transition: none; }
+}
